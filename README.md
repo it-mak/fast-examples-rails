@@ -1,6 +1,7 @@
 # README
 
 Example of integration Wallarm FAST with the rails app using rspec, capybara and selenium.
+The application contains XSS vulnerability which is detected by FAST.
 
 ## How to run specs localy
 
