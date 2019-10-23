@@ -35,7 +35,7 @@ jobs:
             docker-compose build
 
       - run:
-          name: Run specs & record baselines
+          name: Run specs & record baseliness
           command: |
             docker-compose up -d fast selenium \
             && sleep 5 \
