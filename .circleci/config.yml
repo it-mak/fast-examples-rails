@@ -42,7 +42,7 @@ jobs:
             && docker-compose run --name app-test --service-ports app-test bundle exec rspec spec/features/posts_spec.rb
 
       - run:
-          name: Run security tests
+          name: Run security testss
           command: |
             docker-compose up -d app-test \
             && docker-compose run --name fast -e CI_MODE=testing -e TEST_RUN_URI=http://app-test:3000 fast
