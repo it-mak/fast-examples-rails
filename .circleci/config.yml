@@ -21,4 +21,4 @@ jobs:
 
       - fast/run_security_tests:
           app_port: "3000"
-          test_record_id: "3612" # use your test_record_id
+          test_record_id: "3612" # use your test_record_i
