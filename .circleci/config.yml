@@ -4,7 +4,6 @@ jobs:
     docker:
       - image: debian:stretch
 
-
     steps:
       - checkout
 
@@ -28,7 +27,7 @@ jobs:
             set -x
             curl -L https://github.com/docker/compose/releases/download/1.11.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
             chmod +x /usr/local/bin/docker-compose
-
+            
       - setup_remote_docker
 
       - run:
@@ -46,5 +45,6 @@ jobs:
       - run:
           name: Run security testss
           command: |
+            echo $(CIRCLE_WORKFLOW_ID)
             docker-compose up -d app-test \
             && docker-compose run --name fast -e CI_MODE=testing -e TEST_RUN_URI=http://app-test:3000 fast
